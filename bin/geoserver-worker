@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+require 'bundler/setup'
+root = File.expand_path('../lib', File.dirname(__FILE__))
+$: << root
+require 'geoserver/worker'
+require 'sneakers/runner'
+require 'logger'
+
+Sneakers.configure(
+  amqp: Geoserver::Worker.config['events']['server'],
+  exchange: Geoserver::Worker.config['events']['exchange']['geoserver'],
+  exchange_type: :fanout
+)
+Sneakers.logger.level = Logger::INFO
+
+runner = Sneakers::Runner.new([ Geoserver::Worker::EventHandler ])
+runner.run

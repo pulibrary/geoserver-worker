@@ -1,0 +1,15 @@
+inherit_gem:
+  bixby: bixby_default.yml
+AllCops:
+  DisplayCopNames: true
+  TargetRubyVersion: 2.4
+  Exclude:
+    - 'bin/*'
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+Naming/FileName:
+  Exclude: 
+    - "Gemfile"
+Style/StringLiterals:
+  EnforcedStyle: double_quotes

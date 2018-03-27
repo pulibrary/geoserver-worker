@@ -1,0 +1,4 @@
+events:
+  server: <%= ENV['RABBIT_SERVER'] || 'amqp://localhost:5672' %>
+  exchange:
+    geoserver: 'geoserver_events'

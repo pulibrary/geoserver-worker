@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+require "bundler/setup"
+root = File.expand_path('../lib', File.dirname(__FILE__))
+$: << root
+
+require "geoserver/worker"
+
+require "irb"
+IRB.start(__FILE__)
