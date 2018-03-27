@@ -9,7 +9,8 @@ require 'logger'
 Sneakers.configure(
   amqp: Geoserver::Worker.config['events']['server'],
   exchange: Geoserver::Worker.config['events']['exchange']['geoserver'],
-  exchange_type: :fanout
+  exchange_type: :fanout,
+  log: STDOUT
 )
 Sneakers.logger.level = Logger::INFO
 

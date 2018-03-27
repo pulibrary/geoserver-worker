@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Geoserver
   module Worker
     class EventProcessor
@@ -12,22 +13,22 @@ module Geoserver
 
       private
 
-      def event_type
-        event['event']
-      end
-
-      def processor
-        case event_type
-        when 'CREATED'
-          CreateProcessor.new(event)
-        when 'UPDATED'
-          UnknownEvent.new(event)
-        when 'DELETED'
-          DeleteProcessor.new(event)
-        else
-          UnknownEvent.new(event)
+        def event_type
+          event["event"]
         end
-      end
+
+        def processor
+          case event_type
+          when "CREATED"
+            CreateProcessor.new(event)
+          when "UPDATED"
+            UnknownEvent.new(event)
+          when "DELETED"
+            DeleteProcessor.new(event)
+          else
+            UnknownEvent.new(event)
+          end
+        end
     end
   end
 end

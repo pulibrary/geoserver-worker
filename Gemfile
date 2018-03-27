@@ -6,8 +6,8 @@ source "https://rubygems.org"
 group :development, :test do
   gem "bixby", require: false
   gem "coveralls", require: false
-  gem "simplecov", require: false
   gem "rspec", "~> 3.0"
+  gem "simplecov", require: false
 end
 
 # group :test do
@@ -15,7 +15,6 @@ end
 # end
 
 gem "bundler", "~> 1.16"
-gem "geoserver-publish", github: "pulibrary/geoserver-publish", tag: 'v0.1.0'
-gem "foreman"
+gem "geoserver-publish", github: "pulibrary/geoserver-publish", tag: "v0.1.0"
 gem "rake"
 gem "sneakers"

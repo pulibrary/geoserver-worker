@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Geoserver
   module Worker
     class EventProcessor
@@ -10,27 +11,27 @@ module Geoserver
         private
 
           def event_type
-            event['event']
+            event["event"]
           end
 
           def id
-            event['id']
+            event["id"]
           end
 
           def layer_type
-            event['layer_type']
+            event["layer_type"]
           end
 
           def path
-            event['path']
+            event["path"]
           end
 
           def title
-            event['title']
+            event["title"]
           end
 
           def workspace
-            event['workspace']
+            event["workspace"]
           end
       end
     end
