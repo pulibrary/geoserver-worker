@@ -10,10 +10,6 @@ module Geoserver
 
         private
 
-          def event_type
-            event["event"]
-          end
-
           def id
             event["id"]
           end

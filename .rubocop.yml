@@ -4,12 +4,15 @@ AllCops:
   DisplayCopNames: true
   TargetRubyVersion: 2.4
   Exclude:
-    - 'bin/*'
+    - "bin/*"
 Metrics/BlockLength:
   Exclude:
-    - 'spec/**/*'
+    - "spec/**/*"
 Naming/FileName:
   Exclude: 
     - "Gemfile"
+RSpec/SubjectStub:
+  Exclude:
+    - "spec/geoserver/worker/event_handler_spec.rb"
 Style/StringLiterals:
   EnforcedStyle: double_quotes

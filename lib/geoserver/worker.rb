@@ -14,5 +14,9 @@ module Geoserver
     require "geoserver/worker/event_processor/create_processor"
     require "geoserver/worker/event_processor/delete_processor"
     require "geoserver/worker/event_processor/unknown_event"
+
+    def self.root
+      Pathname.new(File.expand_path("../../../", __FILE__))
+    end
   end
 end

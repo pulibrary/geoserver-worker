@@ -10,10 +10,6 @@ group :development, :test do
   gem "simplecov", require: false
 end
 
-# group :test do
-#   gem "webmock"
-# end
-
 gem "bundler", "~> 1.16"
 gem "geoserver-publish", github: "pulibrary/geoserver-publish", tag: "v0.1.0"
 gem "rake"

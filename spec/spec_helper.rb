@@ -15,7 +15,6 @@ $LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
 
 require "bundler/setup"
 require "geoserver/worker"
-# require "webmock/rspec"
 
 Dir[Pathname.new("./").join("spec", "support", "**", "*.rb")].sort.each { |file| require_relative file.gsub(/^spec\//, "") }
 
