@@ -1,6 +1,9 @@
 # Geoserver::Worker
 
-Sneakers worker for syncing GeoServer using RabbitMQ
+[![Build Status](https://img.shields.io/travis/pulibrary/geoserver-worker/master.svg)](https://travis-ci.org/pulibrary/geoserver-worker)
+[![Coverage Status](https://img.shields.io/coveralls/pulibrary/geoserver-worker/master.svg)](https://coveralls.io/github/pulibrary/geoserver-worker?branch=master)
+
+Sneakers worker for syncing GeoServer using RabbitMQ.
 
 ## Installation
 
@@ -43,10 +46,6 @@ RabbitMQ and GeoServer Connection parameters can be set using environment variab
 ## Usage
 
     $ geoserver-worker
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
 ## Contributing
 
