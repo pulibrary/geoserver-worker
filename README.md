@@ -49,4 +49,4 @@ RabbitMQ and GeoServer Connection parameters can be set using environment variab
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/pulibrary/geoserver-messaging.
+Bug reports and pull requests are welcome on GitHub at https://github.com/pulibrary/geoserver-worker.
