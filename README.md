@@ -1,6 +1,6 @@
 # Geoserver::Worker
 
-Sneakers worker for syncing with GeoServer using RabbitMQ
+Sneakers worker for syncing GeoServer using RabbitMQ
 
 ## Installation
 
