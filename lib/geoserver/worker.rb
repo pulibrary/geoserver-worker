@@ -13,6 +13,7 @@ module Geoserver
     require "geoserver/worker/event_processor/processor"
     require "geoserver/worker/event_processor/create_processor"
     require "geoserver/worker/event_processor/delete_processor"
+    require "geoserver/worker/event_processor/update_processor"
     require "geoserver/worker/event_processor/unknown_event"
 
     def self.root

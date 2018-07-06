@@ -22,7 +22,7 @@ module Geoserver
           when "CREATED"
             CreateProcessor.new(event)
           when "UPDATED"
-            UnknownEvent.new(event)
+            UpdateProcessor.new(event)
           when "DELETED"
             DeleteProcessor.new(event)
           else

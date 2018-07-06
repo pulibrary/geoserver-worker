@@ -55,6 +55,28 @@ RSpec.describe Geoserver::Worker::EventProcessor do
 
   context "when given an update event" do
     let(:event_type) { "UPDATED" }
+    let(:layer_type) { "shapefile" }
+
+    before do
+      allow(Geoserver::Publish).to receive(:delete_shapefile)
+      allow(Geoserver::Publish).to receive(:shapefile)
+    end
+
+    it "recreates the shapefile layer in GeoServer" do
+      expect(processor.process).to eq true
+      expect(Geoserver::Publish).to have_received(:delete_shapefile)
+      expect(Geoserver::Publish).to have_received(:shapefile)
+    end
+  end
+
+  context "when given an update event that causes an error" do
+    let(:event_type) { "UPDATED" }
+    let(:path) { nil }
+
+    before do
+      allow(Geoserver::Publish).to receive(:geotiff).and_raise(Geoserver::Publish::Error)
+    end
+
     it "returns false" do
       expect(processor.process).to eq false
     end
@@ -68,7 +90,7 @@ RSpec.describe Geoserver::Worker::EventProcessor do
       allow(Geoserver::Publish).to receive(:delete_shapefile)
     end
 
-    it "deletes the geotiff layer in GeoServer" do
+    it "deletes the shapefile layer in GeoServer" do
       expect(processor.process).to eq true
       expect(Geoserver::Publish).to have_received(:delete_shapefile)
     end
