@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
   spec.executables   = ["geoserver-worker"]
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "bundler", "~> 1.16"
+  spec.add_dependency "bundler", ">= 1.16"
   spec.add_dependency "geoserver-publish"
   spec.add_dependency "sneakers"
 
